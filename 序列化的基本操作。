@@ -1,0 +1,31 @@
+序列化的基本操作。
+
+对象的序列化，反序列化。
+1.对象的序列化是将Object转化成byte序列,反之叫对象的反序列话.
+2.序列话流(ObjectOutputStream),是过滤流----wirteObject
+  反序列化流（ObjectInputStream)----readObject
+
+3序列化接口（Serializable）
+ 对象必须实现序列化接口，才能进行序列化，否则出现异常，
+ 这个接口，没有任何方法，只是一个标准.
+
+  transient 修饰符 不想序列化的修饰符 或是自己想序列化的
+
+  private void writeObject(java.io.ObjectOuutputStream s)
+  		  throws java.io.IOException{
+  		  s.defaultWriteObject(); //把jvm能默认序列化的元素进行序列化操作
+  		  s.writeInt(int a) //能自己完成a 的序列化.
+
+  		  }
+
+private void readObject(java.io.ObjectInputStream s)
+  	 throws java.io.IOExceptio,ClassNotFoundException{
+  	 s.defaultReadObject(); //把jvm能默认序列化的元素进行反序列化操作
+  	 this.元素 = s.readInt();//自己完成元素的反序列化
+
+}
+
+
+如果序列化或者反序列化的子类实现了Serialzable接口，父类则会被显示调用.
+
+

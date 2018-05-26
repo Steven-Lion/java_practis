@@ -1,0 +1,15 @@
+1.流的分类
+按照数据流向的不同。 分为输入流和输出流.
+按照处理数据的单位的不同：节点流 字符流(处理文本文件)
+按照角色的不同。节点流(直接作用于文件的) 处理流.
+
+2.IO的体系
+抽象基类         节点流(文件流)    缓冲流(处理流的一种,加速节点流)
+InputStream      FileInputStream   BufferedInputStream
+OuputStream		 FileOutputStream  BufferedOuputStream  (Flush())
+Reader			 FileReader		   BufferedReader		(readLine())
+Writer			 FileWriter		   BufferedWriterP		(Flush())
+
+转换流: InputStreamReader  OutputStreamWriter
+编码: 字符串  - --> 字符数组.
+解码: 字符数组 --->字符串.

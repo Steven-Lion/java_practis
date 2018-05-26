@@ -1,0 +1,3 @@
+2017Äê-02ÔÂ-15ÈÕ   16:27:02
+java.lang.ArrayIndexOutOfBoundsException: 3
+	at java_log.logtest.main(logtest.java:14)
